@@ -20,4 +20,10 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  // MY TEST
+  it('returns undefined if no parameters are given', () => {
+    expect(_.identity()).toBe(undefined);
+  });
+
 });

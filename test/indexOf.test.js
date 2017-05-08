@@ -26,4 +26,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  // MY TEST
+  it('returns the index of a value at the end of an array starting from the end', () => {
+    const arr = ['foo', 'bar', 'baz'];
+    expect(_.indexOf(arr, 'baz', arr.length-1)).toBe(2);
+  });
 });

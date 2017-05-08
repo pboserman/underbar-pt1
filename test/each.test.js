@@ -39,5 +39,17 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  // MY TEST
+  it('iterates over an empty object, keeping the empty object the same', () => {
+    const obj = {};
+    let count = 0;
+    _.each(obj, function(value, key, iteratedObj) {
+      expect(value).toEqual(iteratedObj[key]);
+      count += 1;
+    });
+    expect(count).toBe(0);
+  });
+
 });
 
