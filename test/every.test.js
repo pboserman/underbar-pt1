@@ -17,5 +17,15 @@ describe('every()', () => {
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
 
+    // MY TEST
+    it('returns false if not all elements in object are numbers', () => {
+      const nums = {
+        'name': 'foo', 
+        'number': 7, 
+        'array': [1, 2, 3]
+      };
+      expect(_.every(nums, el => !isNaN(el))).toBe(false);
+    });
+
   });
 });

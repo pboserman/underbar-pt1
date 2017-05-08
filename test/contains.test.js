@@ -31,4 +31,10 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  // MY TEST
+  it('returns false for an empty object', () => {
+    const emptyObj = {};
+    expect(_.contains(emptyObj, 'foo')).toBe(false);
+  });
+
 });

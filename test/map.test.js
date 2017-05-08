@@ -6,4 +6,15 @@ describe('map()', () => {
     const mappedArr = _.map(arr, (el) => el * el);
     expect(mappedArr).toEqual([1, 4, 9, 16, 25]);
   });
+
+  // MY TEST
+  it('maps elements in an object and return the same elements in array form', () => {
+    const obj = {
+      0: 'foo', 
+      1: 1, 
+      2: [1, 2, 3]
+    };
+    const mappedArr = _.map(obj, (el) => el);
+    expect(mappedArr).toEqual(['foo', 1, [1, 2, 3]]);
+  });
 });

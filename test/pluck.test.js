@@ -11,4 +11,11 @@ describe('pluck()', () => {
     expect(result).toEqual([12, 999, 14]);
   });
 
+  // MY TEST
+  it('returns an empty array when an empty array is passed', () => {
+    const people = [];
+    const result = _.pluck(people, 'foo');
+    expect(result).toEqual([]);
+  });
+
 });

@@ -23,4 +23,10 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  // MY TEST
+  it('filters an array to odd numbers when they are all even', () => {
+    const nums = [2, 4, 6, 8, 10, 12];
+    expect(_.filter(nums, num => num % 2 === 1)).toEqual([]);
+  });
 });

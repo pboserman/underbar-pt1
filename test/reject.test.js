@@ -18,4 +18,11 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  // MY TEST
+  it('rejects numbers from an array when they are all numbers', () => {
+    const nums = [2, 4, 5, 6, 7, 8, 10, 11];
+    expect(_.reject(nums, num => !isNaN(num))).toEqual([]);
+  });
+
 });
