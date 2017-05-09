@@ -51,5 +51,21 @@ describe('each()', () => {
     expect(count).toBe(0);
   });
 
+  it('iterates an array like object with length but other properties too', () => {
+    const obj = {
+      length: 5,
+      name: 'ruler',
+      0: 0,
+      1: 1,
+      5: '5'
+    };
+    let count = 0;
+    _.each(obj, function(value, key, iteratedObj) {
+      expect(value).toEqual(iteratedObj[key]);
+      count += 1;
+    });
+    expect(count).toBe(5);
+  });
+
 });
 

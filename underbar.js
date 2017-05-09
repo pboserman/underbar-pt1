@@ -103,9 +103,7 @@ const some = function(obj, callback=identity) {
 const filter = function(obj, callback=identity) {
   const result = [];
   each(obj, item => {
-    if (callback(item)) {
-      result.push(item);
-    }
+    return !!callback(item) ? result.push(item) : undefined;
   });
   return result;
 };
